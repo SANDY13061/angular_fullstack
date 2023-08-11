@@ -1,0 +1,36 @@
+.bgimg{
+    height: 100%;
+      width:100%;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      margin-top: 65px;
+      position :fixed;
+    background-image: url('src\assets\photo-1579546929662-711aa81148cf.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    }
+    .page{
+      height: 70%;
+      width: 30%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      margin-top: 135px;
+      margin-right: 30%;
+      right:0;
+      border-radius: 25px;
+      background-color: white;
+     
+      
+      
+    }
+    .login{
+        font-size: 25px;
+        
+    }
+    .inputName{
+      border:1px solid blue;
+    }

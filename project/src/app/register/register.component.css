@@ -1,0 +1,71 @@
+.registerbgimg{
+    height: 100%;
+      width:100%;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      /* margin-top: 50px; */
+      margin-bottom: 20px;
+    background-image: url('src\assets\bluebgimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position :fixed;
+
+
+}
+.regimg{
+    height: 400px;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      margin-top: 100px;
+      margin-left: 25%; ;
+      /* right:0; */
+      /* border: 5px double black; */
+       /* box-shadow: 5px 10px rgb(22, 188, 199); */
+       -webkit-box-reflect: below  0px  linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+      
+       box-shadow: 30px 10px lightskyblue;
+       border-radius: 15px 100px 50px;
+       background-image: url('src\assets\fether.jpg');
+      background-color: white;
+      background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -50px;
+    background-position-y: -30px ;
+  
+    
+}
+      
+.reg{
+    width: 100%;
+    height: 70%;
+    margin-top: 70px;
+    
+    
+
+    /* background-color: yellowgreen; */
+}
+
+::ng-deep .mat-form-field-outline-start {
+    border-radius: 28px 0 0 28px !important;
+    min-width: 28px !important;
+  }
+  
+
+.name{
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 50px;
+    height: 30px;
+    /* border-radius: 20px 50px 50px 20px; */
+    /* border-radius: 50px 100px 50px; */
+border: solid;
+    border-radius: 5px 10px 5px 10px ;
+    border-color: rgb(0, 0, 0);
+    
+   
+    
+}

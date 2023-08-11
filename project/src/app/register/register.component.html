@@ -1,0 +1,42 @@
+<div class="registerbgimg">
+    <div class="regimg" align="center">
+        <div class="reg">
+            <form [formGroup]="form" align="center" width="50%">
+                <div style="margin-top: 25px;">
+                  <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label class="la">Email</mat-label>
+                    <input matInput formControlName="email" required>
+                    <!-- <mat-error *ngIf="form.get('Email')?.errors">{{geterrorMsg('Email')}}</mat-error> -->
+                  </mat-form-field>
+                </div>
+                <div>
+                  <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label class="la">Name</mat-label>
+                    <input matInput formControlName="name" required>
+                    <!-- <mat-error *ngIf="form.get('Email')?.errors">{{geterrorMsg('Email')}}</mat-error> -->
+                  </mat-form-field>
+                </div>
+                <div>
+                  <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" required>
+                    <!-- <mat-error *ngIf="form.get('Email')?.errors">{{geterrorMsg('password')}}</mat-error> -->
+                  </mat-form-field>
+                </div>
+            
+                <div>
+                  <button mat-raised-button color="accent"  type="button" (click)="register()">register</button>
+                </div>
+                <div>
+                  <h4 *ngIf="registerErrorMsg" style="color: red">{{registerErrorMsg}}</h4>
+                </div>
+            </form>
+               
+
+                
+        </div>
+        
+
+    </div>
+
+</div>

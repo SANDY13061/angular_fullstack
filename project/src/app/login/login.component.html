@@ -1,0 +1,35 @@
+<div class="bgimg">
+     <div class="page" align="center">
+        <form>
+            <div style="margin-top: 20px; font-size: 35px; font-family: 'Times New Roman', Times, serif;">LOGIN</div>
+            
+            <div align="center" >
+                <mat-form-field appearance="outline" style="margin-top: 20px; width:75%; ">
+                    <mat-label>NAME</mat-label>
+                    <input matInput placeholder="User Name">
+                    </mat-form-field>
+            
+            </div>
+            <div align="center">
+                <mat-form-field appearance="outline" style="margin-top: 20px; width:75%;">
+                    <mat-label>PASSWORD</mat-label>
+                    <input matInput placeholder="password" type="password">
+                    </mat-form-field>
+            
+            </div>
+            <div style="margin-top: 20px;">
+                <mat-checkbox>Terms And Condition</mat-checkbox>
+            </div>
+            <div>
+                <button mat-raised-button color="accent" style="margin-top: 20px;">SUBMIT</button>
+            </div>
+            <div style="margin-top: 20px;">
+                Already a user? <a [routerLink]="[]" (click)="register()">Sign&nbsp;up</a>
+            </div>
+            
+        
+        </form>
+    </div>
+
+</div>
+
