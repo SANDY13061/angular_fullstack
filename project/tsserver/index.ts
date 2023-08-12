@@ -16,5 +16,5 @@ app.use(cors({
 }));
 app.use("/api",api);
 
-var httpPort=8080;
+var httpPort=7000;
 app.listen(httpPort,()=> console.log('fs project api node listerning on port'+ httpPort+'!'));

@@ -12,9 +12,9 @@ export class HttpserviceService {
   ) { }
 
   async register(data:any){
-    return lastValueFrom(this.http.post<any>('http://localhost:8080/api/register',data));
+    return lastValueFrom(this.http.post<any>('http://localhost:7000/api/register',data));
   }
   async login(data:any){
-    return lastValueFrom(this.http.post<any>('http://localhost:8080/api/login',data));
+    return lastValueFrom(this.http.post<any>('http://localhost:7000/api/login',data));
   }
 }
