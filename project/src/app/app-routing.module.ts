@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterModule } from './register/register.module';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { MainpageModule } from './mainpage/mainpage.module';
+import { SuperuserModule } from './superuser/superuser.module';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'',
     loadChildren:()=> import('./mainpage/mainpage.module').then(m=>MainpageModule)
+  },
+  {
+    path:'',
+    loadChildren:()=> import('./superuser/superuser.module').then(m=>SuperuserModule)
   },
 ];
 

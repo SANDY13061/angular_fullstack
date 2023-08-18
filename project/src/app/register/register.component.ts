@@ -44,7 +44,7 @@ export class RegisterComponent implements OnInit {
     let result= await this.http.register(param);
      if(result.success){
       this.registerErrorMsg = undefined
-      this.login()
+      this.mainpage()
      }
      else{
       this.registerErrorMsg=result.message;
@@ -55,7 +55,7 @@ export class RegisterComponent implements OnInit {
       }, 5000);
      }
     }
-    login(){
+    mainpage(){
       this.router.navigate(['mainpage']);
     }
   

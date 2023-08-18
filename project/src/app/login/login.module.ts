@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatInputModule,
     FormsModule,ReactiveFormsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatToolbarModule
   ]
 })
 export class LoginModule { }

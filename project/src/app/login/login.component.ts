@@ -23,4 +23,7 @@ export class LoginComponent {
     this.router.navigate(['mainpage'])
   }
 
+  superuser(){
+    this.router.navigate(['superuser'])
+  }
 }

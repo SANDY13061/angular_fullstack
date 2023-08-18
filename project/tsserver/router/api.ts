@@ -39,4 +39,45 @@ router.post("/login", async (req: any, res)=>{
   }
   
 });
+router.get("/getNonAdminUserList", async (req: any, res)=>{
+  if (cmnCntrl.getIsDBConnected()){
+    let result = await usrCntrl.getNonAdminUserList();
+    if (result.success)res.status(200).json(result);
+    else res.status(200).json(result);
+
+  }
+  else{
+    res.status(501).json({success:false,message:"db connection failure try after some times"});
+
+  }
+});
+router.post("/deleteUser", async (req: any, res)=>{
+  if (cmnCntrl.getIsDBConnected()){
+    console.log(req.body);
+    let result = await usrCntrl.deleteUser(req.body.id);
+    if (result.success)res.status(200).json(result);
+    else res.status(400).json(result);
+
+  }
+  else{
+    res.status(501).json({success:false,message:"db connection failure try after some times"});
+
+  }
+  
+});
+router.post("/editUser", async (req: any, res)=>{
+  if (cmnCntrl.getIsDBConnected()){
+    console.log(req.body);
+    let result = await usrCntrl.editUser(req.body);
+    if (result.success)res.status(200).json(result);
+    else res.status(400).json(result);
+
+  }
+  else{
+    res.status(501).json({success:false,message:"db connection failure try after some times"});
+
+  }
+  
+});
+
 

@@ -35,6 +35,42 @@ export class UserController{
 
             }
         }
+        async getNonAdminUserList(){
+            let result=await usrdb.getNonAdminUserList();
+            if (result?.success){
+                return{success:true,rowCount:result.rowCount,rows: result.rows}
+
+            }
+            else{ 
+                if (result?.connection_error) cmnCntrl.getIsDBConnected();
+                return {success:false,message:result?.message}
+            }
+
+        }
+        async deleteUser(id:number){
+            let result=await usrdb.deleteUser(id);
+            if (result?.success){
+                return{success:true,rowCount:result.rowCount,rows: result.rows}
+
+            }
+            else{ 
+                if (result?.connection_error) cmnCntrl.getIsDBConnected();
+                return {success:false,message:result?.message}
+            }
+
+        }
+        async editUser(id:number){
+            let result=await usrdb.editUser(id);
+            if (result?.success){
+                return{success:true,rowCount:result.rowCount,rows: result.rows}
+
+            }
+            else{ 
+                if (result?.connection_error) cmnCntrl.getIsDBConnected();
+                return {success:false,message:result?.message}
+            }
+
+        }
 
     }
 

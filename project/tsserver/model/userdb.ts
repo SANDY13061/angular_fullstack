@@ -15,4 +15,18 @@ export class UsersDBQry{
     console.log(qryText,qryParm);
     return fnDbQuery('login',qryText,qryParm)
   }
+  async getNonAdminUserList(){
+    const qryText=`SELECT id, email, name,create_on FROM registerdata where not superuser order by id`;
+    return fnDbQuery("getUserList",qryText);
+  }
+  async deleteUser(id:number){
+    const qryText=`DELETE FROM registerdata WHERE id = $1`;
+    const qryParm=[id];
+    return fnDbQuery("deleteUser",qryText,qryParm);
+  }
+  async editUser(param:any){
+    const qryText=`UPDATE registerdata SET email = $1,name = $2 WHERE id=$3`
+    const qryparam=[param.email,param.name,param.id]
+    return fnDbQuery("deketeUser",qryText,qryparam)
+  }
 }
