@@ -22,6 +22,8 @@ export class UserController{
             if(result?.success && result?.rowCount && result?.rowCount > 0){
                 let res=result.rows[0];
                 if(res.password === param.password){
+                    let papa=await usrdb.userdata(res.email,res.name,res.superuser)
+                    console.log(res.name)
                     return {success: true, rows: [{name:res.name,user_id:res.user_id,email:res.email}]};
                 }
                 else{
@@ -35,6 +37,19 @@ export class UserController{
 
             }
         }
+        async LoginUserData(){
+            let result=await usrdb.LoginUserData();
+            if (result?.success){
+                return{success:true,rowCount:result.rowCount,rows: result.rows}
+    
+            }
+            else{ 
+                if (result?.connection_error) cmnCntrl.getIsDBConnected();
+                return {success:false,message:result?.message}
+            }
+    
+
+    }
         async getNonAdminUserList(){
             let result=await usrdb.getNonAdminUserList();
             if (result?.success){

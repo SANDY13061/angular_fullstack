@@ -14,14 +14,8 @@ const routes: Routes = [
     path:'',
     loadChildren:()=> import('./register/register.module').then(m=>RegisterModule)
   },
-  {
-    path:'',
-    loadChildren:()=> import('./mainpage/mainpage.module').then(m=>MainpageModule)
-  },
-  {
-    path:'',
-    loadChildren:()=> import('./superuser/superuser.module').then(m=>SuperuserModule)
-  },
+ 
+ 
 ];
 
 @NgModule({

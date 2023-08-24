@@ -13,15 +13,15 @@ export class CommonCtrl{
         console.log("db connected")
          
         }
-        else if( result?.connection_error){
-          isDBConnected=false;
-          isDBCheckRunning=true; 
-          console.log("could not conect db, will retry in 30s")
-          setTimeout(()=> {
-            this.checkDB()
-          },30000);
-          
-        }
+      else if( result?.connection_error){
+        isDBConnected=false;
+        isDBCheckRunning=true; 
+        console.log("could not conect db, will retry in 30s")
+        setTimeout(()=> {
+          this.checkDB()
+        },30000);
+        
+      }
         else {
           isDBConnected=true;
           isDBCheckRunning=false;

@@ -3,32 +3,30 @@
         <span><b style="font-size: 40x;"> &nbsp;SANDY</b></span>
     </mat-toolbar>
 <div class="bgimg">
-    <div style="margin-top: 20px;">
-        Already a user? <a [routerLink]="[]" (click)="superuser()">superuser</a>
-      </div>
      <div class="page" align="center">
+        <!-- <button (click)="onclick()">submit</button> -->
         <form>
             <div style="margin-top: 20px; font-size: 35px; font-family: 'Times New Roman', Times, serif;">LOGIN</div>
             
             <div align="center" >
                 <mat-form-field appearance="outline" style="margin-top: 20px; width:75%; ">
-                    <mat-label>NAME</mat-label>
-                    <input matInput placeholder="User Name">
+                    <mat-label>EMAIL</mat-label>
+                    <input matInput type="text"   id="username"name="editEmail" [(ngModel)]="editEmail"  required>
                     </mat-form-field>
             
             </div>
             <div align="center">
                 <mat-form-field appearance="outline" style="margin-top: 20px; width:75%;">
                     <mat-label>PASSWORD</mat-label>
-                    <input matInput placeholder="password" type="password">
+                    <input matInput type="text"  id="editpassward"name="editpassward" [(ngModel)]="editpassward" required>
                     </mat-form-field>
             
             </div>
             <div style="margin-top: 20px;">
-                <mat-checkbox>Terms And Condition</mat-checkbox>
+                <mat-checkbox (change)="onCheck($event,'check')">Terms And Condition</mat-checkbox>
             </div>
             <div>
-                <button mat-raised-button color="accent" style="margin-top: 20px;">SUBMIT</button>
+                <button mat-raised-button color="accent" style="margin-top: 20px;"(click)="onSubmit()">SUBMIT</button>
             </div>
             <div style="margin-top: 20px;">
                 Already a user? <a [routerLink]="[]" (click)="register()">Sign&nbsp;up</a>

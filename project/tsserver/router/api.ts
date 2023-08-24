@@ -30,7 +30,7 @@ router.post("/login", async (req: any, res)=>{
     console.log(req.body);
     let result = await usrCntrl.login(req.body);
     if (result.success)res.status(200).json(result);
-    else res.status(400).json(result);
+    else res.status(200).json(result);
 
   }
   else{
@@ -78,6 +78,18 @@ router.post("/editUser", async (req: any, res)=>{
 
   }
   
+});
+router.get("/LoginUserData", async (req: any, res)=>{
+  if (cmnCntrl.getIsDBConnected()){
+    let result = await usrCntrl.LoginUserData();
+    if (result.success)res.status(200).json(result);
+    else res.status(200).json(result);
+
+  }
+  else{
+    res.status(501).json({success:false,message:"db connection failure try after some times"});
+
+  }
 });
 
 

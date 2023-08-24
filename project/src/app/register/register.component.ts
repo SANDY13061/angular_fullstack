@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
     private http:HttpserviceService,
    ){}
   ngOnInit(): void {
+    console.log("hello")
    
   }
   async register(){
@@ -56,7 +57,7 @@ export class RegisterComponent implements OnInit {
      }
     }
     mainpage(){
-      this.router.navigate(['mainpage']);
+      this.router.navigate(['']);
     }
   
      

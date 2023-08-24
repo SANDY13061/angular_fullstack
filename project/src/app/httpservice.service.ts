@@ -12,18 +12,21 @@ export class HttpserviceService {
   ) { }
 
   async register(data:any){
-    return lastValueFrom(this.http.post<any>('http://localhost:2000/api/register',data));
+    return lastValueFrom(this.http.post<any>('http://localhost:4000/api/register',data));
   }
   async login(data:any){
-    return lastValueFrom(this.http.post<any>('http://localhost:2000/api/login',data));
+    return lastValueFrom(this.http.post<any>('http://localhost:4000/api/login',data));
   }
   async getNonAdminUserList(){
-    return lastValueFrom(this.http.get<any>('http://localhost:2000/api/getNonAdminUserList'));
+    return lastValueFrom(this.http.get<any>('http://localhost:4000/api/getNonAdminUserList'));
   }
   async deleteUser(data:any){
-    return lastValueFrom(this.http.post<any>('http://localhost:2000/api/deleteUser',data));
+    return lastValueFrom(this.http.post<any>('http://localhost:4000/api/deleteUser',data));
   }
   async editUser(data:any){
-    return lastValueFrom(this.http.post<any>('http://localhost:2000/api/editUser',data));
+    return lastValueFrom(this.http.post<any>('http://localhost:4000/api/editUser',data));
+  }
+  async LoginUserData(){
+    return lastValueFrom(this.http.get<any>('http://localhost:4000/api/LoginUserData'));
   }
 }

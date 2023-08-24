@@ -1,0 +1,46 @@
+.bgcolor1{
+  width:4000px;
+  height:600px;
+  background-image: linear-gradient(to left top, #eeb33e, #ff833f, #ff3f66, #ff00a4, #c812eb);
+  rotate:-10deg;
+  position: fixed;
+  top:-500px;
+  left:-300px 
+
+}
+.sample{
+  position: relative;
+  margin-top: 0px;
+  width: 200px;
+  height:300px;
+  display: flex;
+
+  z-index: 1;
+}
+.doller{
+  color:yellow;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+  width: 80px;
+  height:40px;
+ -webkit-text-stroke:1px  white;
+ align-items: center;
+ margin-top: 20px;
+ margin-left:250px ;
+ 
+  
+  
+
+}
+.pay{
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  width: 80px;
+  height:40px;
+ -webkit-text-stroke:1px  white;
+ text-align: center;
+ margin-top: 15px;
+ 
+
+}

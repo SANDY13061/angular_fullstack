@@ -10,7 +10,7 @@ export class UsersDBQry{
     return fnDbQuery("register",qryText,qryParm)
   }
   async login(email:string){
-    const qryText=`SELECT id as user_id,email,password,name FROM registerdata WHERE email= lower($1)`;
+    const qryText=`SELECT id as user_id,email,password,name,superuser FROM registerdata WHERE email= lower($1)`;
     const qryParm=[email];
     console.log(qryText,qryParm);
     return fnDbQuery('login',qryText,qryParm)
@@ -29,4 +29,15 @@ export class UsersDBQry{
     const qryparam=[param.email,param.name,param.id]
     return fnDbQuery("deketeUser",qryText,qryparam)
   }
+  async userdata(email:string,name:string,superuser:string){
+    const qryText=`UPDATE logindata SET email = $1 ,name = $2,superuser=$3 WHERE id=1`
+    const qryparam=[email,name,superuser]
+    return fnDbQuery("userdata",qryText,qryparam)
+  
 }
+async LoginUserData(){
+  const qryText=`SELECT email,name,superuser FROM logindata where id=1`;
+  return fnDbQuery("getUserList",qryText);
+}
+}
+
